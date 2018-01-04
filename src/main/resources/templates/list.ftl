@@ -19,7 +19,14 @@
 
 	                <div class="row">
 	                    <div class="form-actions floatRight">
-	                        <button type="submit" title="Add Tasks" value="{{!ctrl.todo.id ? 'Add' : 'Update'}}" class="btn btn-primary btn-sm" ng-disabled="myForm.$invalid || myForm.$pristine"><i class="fa fa-plus-square" aria-hidden="true"></i></button>
+	                        <button type="submit" title="Add/Update Tasks" class="btn btn-primary btn-sm" ng-disabled="myForm.$invalid || myForm.$pristine">
+	                          <div ng-show="ctrl.showButton(ctrl.todo.id)">
+	                            <i class="fa fa-plus-square" aria-hidden="true"></i>
+	                          </div>
+	                          <div ng-hide="ctrl.showButton(ctrl.todo.id)">  
+	                            <i class="fa fa-pencil" aria-hidden="true"></i>
+	                          </div>  
+	                        </button>
 	                        <button type="button" title="Clear Form" ng-click="ctrl.reset()" class="btn btn-warning btn-sm" ng-disabled="myForm.$pristine"><i class="fa fa-eraser" aria-hidden="true"></i></button>
 	                    </div>
 	                </div>

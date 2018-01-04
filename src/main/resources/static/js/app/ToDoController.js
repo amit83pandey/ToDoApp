@@ -18,9 +18,10 @@ angular.module('ToDoApp').controller('ToDoController',
         self.showAll = showAll;
         self.showActive = showActive;
         self.showInactive = showInactive;
-        self.getFilter = getFilter;
+        self.getFilter  = getFilter;
+        self.showButton = showButton;        
         self.filter = "$";
-        self.taskListDesc = "List of All Tasks";
+        self.taskListDesc = " All Tasks";
         self.successMessage = '';
         self.errorMessage = '';
         self.done = false;
@@ -60,6 +61,7 @@ angular.module('ToDoApp').controller('ToDoController',
                 updateTodo(self.todo, self.todo.id);
                 console.log('Task updated with id ', self.todo.id);
             }
+            resetInput();
         }
 
         function createTodo(todo) {
@@ -145,6 +147,12 @@ angular.module('ToDoApp').controller('ToDoController',
             self.errorMessage='';
             self.todo={};
             $scope.myForm.$setPristine(); //reset Form
+        }
+        function resetInput(){
+            self.todo={};            
+        }        
+        function showButton(value){
+        	return ( !value ? true : false ) ;
         }
     }
 
