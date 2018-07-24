@@ -1,8 +1,8 @@
 var app = angular.module('ToDoApp',['ui.router','ngStorage']);
 
 app.constant('urls', {
-    BASE: 'http://localhost:8080/ToDoApp',
-    TASK_SERVICE_API : 'http://localhost:8080/ToDoApp/api/todo/'
+    BASE: 'http://localhost:8080/todo-util-0.0.1',
+    TASK_SERVICE_API : 'http://localhost:8080/todo-util-0.0.1/api/todo/'
 });
 
 app.config(['$stateProvider', '$urlRouterProvider',
