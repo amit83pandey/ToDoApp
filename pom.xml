@@ -5,7 +5,7 @@
   <version>0.0.1</version>
   <name>To do application</name>
   <description>To do application for emirates</description>
-
+  <packaging>war</packaging>
   
     <parent>
         <groupId>org.springframework.boot</groupId>
