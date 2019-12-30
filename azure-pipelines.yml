@@ -31,7 +31,7 @@ steps:
 #- script: curl -o test.txt http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/test.txt 
   #displayName: 'Download text file'
 
-- script: echo %systemdrive%
-- script: echo %homepath%
+- script: cd C:\Users\VssAdministrator
+- script: dir
 #- script: :beatblip.exe -open "test.txt"
 #   displayName:'Run Beatblip'
