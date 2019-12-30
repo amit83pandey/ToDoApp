@@ -10,8 +10,8 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+#- script: echo Hello, world!
+#  displayName: 'Run a one-line script'
 
 #- script: |
  #   echo Add other tasks to build, test, and deploy your project.
@@ -19,17 +19,17 @@ steps:
   #displayName: 'Run a multi-line script'
   
 #- script: echo $(Agent.BuildDirectory)
-#- script: curl -o beatblip.zip http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/BeatBlipConsole.zip 
-#  displayName: 'Download Zip file'
+- script: curl -o beatblip.zip http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/BeatBlipConsole.zip 
+  displayName: 'Download Zip file'
 
-#- script: :tar -xf beatblip.zip
-   #displayName:'Unzip Beatblip'
+- script: :tar -xf beatblip.zip
+   displayName:'Unzip Beatblip'
 
-#- script: :cd beatblip
-#   displayName:'Preparing to run exe'   
+- script: :cd beatblip
+   displayName:'Preparing to run exe'   
 
-#- script: curl -o test.txt http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/test.txt 
-  #displayName: 'Download text file'
+- script: curl -o test.txt http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/test.txt 
+  displayName: 'Download text file'
 
 - script: dir C:\Users\VssAdministrator
 #- script: dir
