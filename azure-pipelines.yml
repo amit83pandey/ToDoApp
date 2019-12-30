@@ -19,8 +19,13 @@ steps:
   #displayName: 'Run a multi-line script'
   
 #- script: echo $(Agent.BuildDirectory)
+
+- script: dir
+
 - script: curl -o beatblip.zip http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/BeatBlipConsole.zip 
   displayName: 'Download Zip file'
+
+- script: dir
 
 - script: :tar -xf beatblip.zip
    displayName:'Unzip Beatblip'
