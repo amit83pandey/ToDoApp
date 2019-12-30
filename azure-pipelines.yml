@@ -19,18 +19,19 @@ steps:
   #displayName: 'Run a multi-line script'
   
 #- script: echo $(Agent.BuildDirectory)
-- script: curl -o beatblip.zip http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/BeatBlipConsole.zip 
-  displayName: 'Download Zip file'
+#- script: curl -o beatblip.zip http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/BeatBlipConsole.zip 
+#  displayName: 'Download Zip file'
 
-- script: :tar -xf beatblip.zip
-   displayName:'Unzip Beatblip'
+#- script: :tar -xf beatblip.zip
+   #displayName:'Unzip Beatblip'
 
-- script: :cd beatblip
-   displayName:'Preparing to run exe'   
+#- script: :cd beatblip
+#   displayName:'Preparing to run exe'   
 
-- script: curl -o test.txt http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/test.txt 
-  displayName: 'Download text file'
+#- script: curl -o test.txt http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/test.txt 
+  #displayName: 'Download text file'
 
-
-- script: :beatblip.exe -open "test.txt"
-   displayName:'Run Beatblip'
+- script: echo %systemdrive%
+- script: echo %homepath%
+#- script: :beatblip.exe -open "test.txt"
+#   displayName:'Run Beatblip'
