@@ -27,7 +27,7 @@ steps:
 
 - script: dir
 
-- script: tar -xf beatblip.zip
+- script: tar -xvzf beatblip.zip
     
 - script: dir
 
