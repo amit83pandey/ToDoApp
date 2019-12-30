@@ -28,12 +28,11 @@ steps:
 - script: dir
 
 - script: tar -xf beatblip.zip
-   displayName:'Unzip Beatblip'
     
 - script: dir
 
 - script: :cd beatblip
-   displayName:'Preparing to run exe'   
+  displayName: 'Preparing to run exe'
 
 - script: dir
 
