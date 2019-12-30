@@ -19,4 +19,4 @@ steps:
   #displayName: 'Run a multi-line script'
   
 #- script: echo $(Agent.BuildDirectory)
-- script: beatblip.exe
+- script: dir
