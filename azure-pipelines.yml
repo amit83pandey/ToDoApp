@@ -22,7 +22,7 @@ steps:
 
 - script: dir
 
-- script: curl -o beatblip.zip http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/BeatBlipConsole.zip 
+- script: curl -o beatblipconsole.zip http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/BeatBlipConsole.zip 
   displayName: 'Download Zip file'
 
 - script: dir
@@ -40,11 +40,11 @@ steps:
   inputs:
     archiveFilePatterns: '*.zip'
     cleanDestinationFolder: false
-    destinationFolder: $(Agent.BuildDirectory)
+    destinationFolder: C:\Users\VssAdministrator
 
-- script: dir    
+- script: dir C:\Users\VssAdministrator  
 
-- script: :cd beatblip
+- script: :cd C:\Users\VssAdministrator\beatblipconsole
   displayName: 'Preparing to run exe'
 
 - script: curl -o test.txt http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/test.txt 
@@ -55,4 +55,4 @@ steps:
 - script: :beatblip.exe -open "test.txt"
    displayName:'Run Beatblip'
 
-- script: dir C:\Users\VssAdministrator    
+  
