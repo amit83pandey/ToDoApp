@@ -55,5 +55,7 @@ steps:
 
 - script: C:\Users\VssAdministrator\beatblip\beatblip.exe -open "test.txt"
    displayName:'Run Beatblip'
-- script: dir C:\Users\VssAdministrator  
+- script: dir C:\Users\VssAdministrator
+
+- script: dir C:\Users\VssAdministrator\BeatBlip-Log\beatblip-gui.log  
   
