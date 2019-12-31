@@ -51,7 +51,8 @@ steps:
   displayName: 'Download text file'
 
 
-#- script: dir
+- script: dir
+
 - script: beatblip.exe -open "test.txt"
    displayName:'Run Beatblip'
 
