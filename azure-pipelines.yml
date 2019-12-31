@@ -53,7 +53,7 @@ steps:
 
 - script: dir
 
-- script: C:\Users\VssAdministrator\beatblip\beatblip.exe -open "test.txt"
+- script: C:\Users\VssAdministrator\beatblip\beatblip.exe -open "$(Agent.BuildDirectory)\test.txt"
    displayName:'Run Beatblip'
 - script: dir C:\Users\VssAdministrator
 
