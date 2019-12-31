@@ -27,21 +27,27 @@ steps:
 
 - script: dir
 
-- script: tar-xvzf beatblip.zip
+- script: tar -xvzf beatblip.zip
     
 - script: dir
 
-- script: :cd beatblip
-  displayName: 'Preparing to run exe'
+#- script: :cd beatblip
+#  displayName: 'Preparing to run exe'
 
 - script: dir
 
-- script: curl -o test.txt http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/test.txt 
-  displayName: 'Download text file'
+#- script: curl -o test.txt http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/test.txt 
+#  displayName: 'Download text file'
 
-- script: dir
+#- script: dir
 
-- script: dir C:\Users\VssAdministrator
+- task: ExtractFiles@1
+  inputs:
+    archiveFilePatterns: '*.zip'
+    cleanDestinationFolder: false
+    destinationFolder: C:\Users\VssAdministrator
+
+- script: dir C:\Users\VssAdministrator    
 #- script: dir
 #- script: :beatblip.exe -open "test.txt"
 #   displayName:'Run Beatblip'
