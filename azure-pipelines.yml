@@ -27,14 +27,14 @@ steps:
 
 - script: dir
 
-- script: tar -xvzf beatblip.zip
+#- script: tar -xvzf beatblip.zip
     
-- script: dir
+#- script: dir
 
 #- script: :cd beatblip
 #  displayName: 'Preparing to run exe'
 
-- script: dir
+#- script: dir
 
 #- script: curl -o test.txt http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/test.txt 
 #  displayName: 'Download text file'
