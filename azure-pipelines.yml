@@ -44,7 +44,7 @@ steps:
 
 - script: dir C:\Users\VssAdministrator  
 
-- script: :cd C:\Users\VssAdministrator\beatblipconsole
+- script: cd C:\Users\VssAdministrator\beatblip
   displayName: 'Preparing to run exe'
 
 - script: curl -o test.txt http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/test.txt 
@@ -52,7 +52,7 @@ steps:
 
 
 #- script: dir
-- script: :beatblip.exe -open "test.txt"
+- script: beatblip.exe -open "test.txt"
    displayName:'Run Beatblip'
 
   
