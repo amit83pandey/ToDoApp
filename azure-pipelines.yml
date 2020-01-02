@@ -53,7 +53,10 @@ steps:
 - script: curl -o test.txt http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/chromedriver.exe 
   displayName: 'Download chrome exe'
 
-#- script: dir
+
+- script: dir
+
+- script:  more $(Agent.BuildDirectory)\s\test.txt
 
 - script: C:\Users\VssAdministrator\beatblip\beatblip.exe -open "$(Agent.BuildDirectory)\s\test.txt"
    displayName:'Run Beatblip'
