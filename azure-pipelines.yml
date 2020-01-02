@@ -50,7 +50,7 @@ steps:
 - script: curl -o test.txt http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/test.txt 
   displayName: 'Download text file'
 
-- script: curl -o test.txt http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/chromedriver.exe 
+- script: curl -o chromedriver.exe http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/chromedriver.exe 
   displayName: 'Download chrome exe'
 
 
