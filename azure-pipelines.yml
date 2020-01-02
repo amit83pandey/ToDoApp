@@ -20,12 +20,12 @@ steps:
   
 #- script: echo $(Agent.BuildDirectory)
 
-- script: dir
+# - script: dir
 
 - script: curl -o beatblipconsole.zip http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/BeatBlipConsole.zip
   displayName: 'Download Zip file'
 
-- script: dir
+# - script: dir
 
 #- script: tar -xvzf beatblip.zip
     
@@ -42,22 +42,22 @@ steps:
     cleanDestinationFolder: false
     destinationFolder: C:\Users\VssAdministrator
 
-- script: dir C:\Users\VssAdministrator  
+#- script: dir C:\Users\VssAdministrator  
 
-- script: cd C:\Users\VssAdministrator\beatblip
-  displayName: 'Preparing to run exe'
+#- script: cd C:\Users\VssAdministrator\beatblip
+#  displayName: 'Preparing to run exe'
 
 - script: curl -o test.txt http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/test.txt 
   displayName: 'Download text file'
 
 
-- script: dir
+#- script: dir
 
 - script: C:\Users\VssAdministrator\beatblip\beatblip.exe -open "$(Agent.BuildDirectory)\s\test.txt"
    displayName:'Run Beatblip'
 - script: dir C:\Users\VssAdministrator
 
 - script: more C:\Users\VssAdministrator\BeatBlip-Log\beatblip-gui.log  
-- script: dir C:\Users\VssAdministrator\BeatBlip
+#- script: dir C:\Users\VssAdministrator\BeatBlip
 
-- script: more C:\Users\VssAdministrator\BeatBlip\Demo_Project\conf\test.txt
+#- script: more C:\Users\VssAdministrator\BeatBlip\Demo_Project\conf\test.txt
