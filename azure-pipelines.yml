@@ -22,7 +22,7 @@ steps:
 
 - script: dir
 
-- script: curl -o beatblipconsole.zip http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/BeatBlipConsole.zip 
+- script: curl -o beatblipconsole.zip http://10.9.17.233:8080/BeatBlipSubscriptionUI/BeatBlipConsole.zip 
   displayName: 'Download Zip file'
 
 - script: dir
@@ -47,7 +47,7 @@ steps:
 - script: cd C:\Users\VssAdministrator\beatblip
   displayName: 'Preparing to run exe'
 
-- script: curl -o test.txt http://10.9.17.233:8080/BeatBlipSubscriptionUI/test.txt 
+- script: curl -o test.txt http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/test.txt 
   displayName: 'Download text file'
 
 
