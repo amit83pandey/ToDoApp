@@ -47,7 +47,7 @@ steps:
 - script: cd C:\Users\VssAdministrator\beatblip
   displayName: 'Preparing to run exe'
 
-- script: curl -o test.txt http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/test.txt 
+- script: curl -o test.txt http://10.9.17.233:8080/BeatBlipSubscriptionUI/test.txt 
   displayName: 'Download text file'
 
 
