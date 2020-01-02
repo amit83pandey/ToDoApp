@@ -22,7 +22,7 @@ steps:
 
 - script: dir
 
-- script: curl -o beatblipconsole.zip http://10.9.17.233:8080/BeatBlipSubscriptionUI/BeatBlipConsole.zip 
+- script: curl -o beatblipconsole.zip http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/BeatBlipConsole.zip
   displayName: 'Download Zip file'
 
 - script: dir
