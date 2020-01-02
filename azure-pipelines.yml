@@ -58,4 +58,5 @@ steps:
 - script: dir C:\Users\VssAdministrator
 
 - script: more C:\Users\VssAdministrator\BeatBlip-Log\beatblip-gui.log  
-  
+
+- script: more C:\Users\VssAdministrator\BeatBlip\Demo_Project\conf\test.txt
