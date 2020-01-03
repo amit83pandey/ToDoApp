@@ -10,44 +10,9 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
-#- script: echo Hello, world!
-#  displayName: 'Run a one-line script'
-
-#- script: |
- #   echo Add other tasks to build, test, and deploy your project.
-  #  echo See https://aka.ms/yaml
-  #displayName: 'Run a multi-line script'
-  
-#- script: echo $(Agent.BuildDirectory)
-
-# - script: dir
-#Step1
-#- script: curl -o beatblipconsole.zip http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/BeatBlipConsole.zip
-#  displayName: 'Download Zip file'
-
-#Step2 Extracting Zip File
--# task: ExtractFiles@1
-  inputs:
-    archiveFilePatterns: '*.zip'
-    cleanDestinationFolder: false
-    destinationFolder: C:\Users\VssAdministrator
-
-#Step3
- #script: curl -o test.txt http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/test.txt 
-  #displayName: 'Download text file'
-
-#Step4
-#- script: curl -o chromedriver.exe http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/chromedriver.exe 
-#  displayName: 'Download chrome exe'
-
-#Step5
-#- script: C:\Users\VssAdministrator\beatblip\beatblip.exe -open "$(Agent.BuildDirectory)\s\test.txt"
-#   displayName:'Run Beatblip'
-# donwload Batch file
 - script: curl -o test.bat http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/test.bat 
   displayName: 'Download Batch Script'
 
-#step6
 - task: BatchScript@1
   inputs:
     filename: '$(Agent.BuildDirectory)\s\test1.bat'
