@@ -44,14 +44,6 @@ steps:
 - script: C:\Users\VssAdministrator\beatblip\beatblip.exe -open "$(Agent.BuildDirectory)\s\test.txt"
    displayName:'Run Beatblip'
 #Step6
-- script: echo pass > status.txt
-  displayName: 'Creating Status File'
-
-- script: more C:\Users\VssAdministrator\beatblip\settings\status.txt
-- task: WindowsMachineFileCopy@2
+- task: BatchScript@1
   inputs:
-      SourcePath: '$(Agent.BuildDirectory)\s\status.txt'
-      MachineNames: '65.74.138.68'
-      AdminUserName: 'root'
-      AdminPassword: '@LLAgr!90#'
-      TargetPath: '/home/status.txt'
+    filename: '@echo off FOR /F %%i IN (C:\Users\VssAdministrator\beatblip\settings\status.txt) do set statusvalue=%%i  echo "here" if %statusvalue%==0 (Goto :eof) else (echo "pass")	 echo "ending script"'
