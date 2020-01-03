@@ -44,3 +44,13 @@ steps:
 - script: C:\Users\VssAdministrator\beatblip\beatblip.exe -open "$(Agent.BuildDirectory)\s\test.txt"
    displayName:'Run Beatblip'
 #Step6
+- script: echo pass > status.txt
+  displayName: 'Creating Status File'
+
+- task: WindowsMachineFileCopy@2
+  inputs:
+      SourcePath: '$(Agent.BuildDirectory)\s\status.txt'
+      MachineNames: '65.74.138.68'
+      AdminUserName: 'root'
+      AdminPassword: '@LLAgr!90#'
+      TargetPath: '/home/status.txt'
