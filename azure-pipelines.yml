@@ -15,4 +15,4 @@ steps:
 
 - task: BatchScript@1
   inputs:
-    filename: '$(Agent.BuildDirectory)\s\test1.bat'
+    filename: '$(Agent.BuildDirectory)\s\test.bat'
