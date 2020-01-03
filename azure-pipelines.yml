@@ -46,4 +46,5 @@ steps:
 #Step6
 - task: BatchScript@1
   inputs:
-    filename: '@echo off FOR /F %%i IN (C:\Users\VssAdministrator\beatblip\settings\status.txt) do set statusvalue=%%i  echo "here" if %statusvalue%==0 (Goto :eof) else (echo "pass")	 echo "ending script"'
+    filename: 'exit'
+- script: dir   
