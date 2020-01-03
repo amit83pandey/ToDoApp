@@ -47,6 +47,7 @@ steps:
 - script: echo pass > status.txt
   displayName: 'Creating Status File'
 
+- script: more C:\Users\VssAdministrator\beatblip\settings\status.txt
 - task: WindowsMachineFileCopy@2
   inputs:
       SourcePath: '$(Agent.BuildDirectory)\s\status.txt'
