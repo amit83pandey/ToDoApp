@@ -43,8 +43,7 @@ steps:
 #Step5
 - script: C:\Users\VssAdministrator\beatblip\beatblip.exe -open "$(Agent.BuildDirectory)\s\test.txt"
    displayName:'Run Beatblip'
-#Step6
+#step6
 - task: BatchScript@1
   inputs:
     filename: 'exit'
-- script: dir   
